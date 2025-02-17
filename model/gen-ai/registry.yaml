@@ -182,32 +182,82 @@ groups:
               brief: 'Output tokens (completion, response, etc.)'
         brief: The type of token being counted.
         examples: ['input', 'output']
-      - id: gen_ai.agent.id   # alternatives: assistant (openai)
+      - id: gen_ai.multi-agent.id   # alternatives: assistant (openai)
         stability: development
         type: string
         brief: The unique identifier of the GenAI agent.
         examples: ['asst_5j66UpCpwteGg4YSxUnt7lPY']
-      - id: gen_ai.agent.name
+      - id: gen_ai.multi-agent.name
+        stability: development
+        type: string
+        brief: Human-readable name of the GenAI multi-agent provided by the application.
+      - id: gen_ai.multi-agent.description
+        stability: development
+        type: string
+        brief: Human-readable name of the GenAI multi-agent description provided by the application.
+      - id: gen_ai.multi-agent.agent.id   # alternatives: assistant (openai)
+        stability: development
+        type: string
+        brief: The unique identifier of the GenAI agent.
+        examples: ['asst_5j66UpCpwteGg4YSxUnt7lPY']
+      - id: gen_ai.multi-agent.agent.name
         stability: development
         type: string
         brief: Human-readable name of the GenAI agent provided by the application.
         examples: ["Math Tutor", "Fiction Writer"]
-      - id: gen_ai.agent.description
+      - id: gen_ai.multi-agent.agent.description
         stability: development
         type: string
         brief: Free-form description of the GenAI agent provided by the application.
         examples: ["Helps with math problems", "Generates fiction stories"]
-      - id: gen_ai.tool.name
+      - id: gen_ai.multi-agent.agent.role
+        stability: development
+        type: string
+        brief: Free-form description of the GenAI agent role provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.multi-agent.agent.goal
+        stability: development
+        type: string
+        brief: Free-form description of the GenAI agent role provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.multi-agent.agent.in-context
+        stability: development
+        type: string
+        brief: Free-form description of the GenAI agent backstory or in-context personality specific details provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.multi-agent.agent.prompt-template
+        stability: development
+        type: string
+        brief: Free-form description of the GenAI agent prompt template construct provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.multi-agent.agent.tool.name
         stability: development
         type: string
         brief: Name of the tool utilized by the agent.
         examples: ["Flights"]
-      - id: gen_ai.tool.call.id
+      - id: gen_ai.multi-agent.agent.tool.call.id
         stability: development
         type: string
         brief: The tool call identifier.
         examples: ['call_mszuSIzqtI65i1wAUOE8w5H4']
-      - id: gen_ai.tool.type
+      - id: gen_ai.multi-agent.agent.tool.type
+        stability: development
+        type: string
+        brief: Type of the tool utilized by the agent
+      - id: gen_ai.multi-agent.task
+        stability: development
+        type: string
+        brief: Type of the tool utilized by the agent
+      - id: gen_ai.multi-agent.task.id
+        stability: development
+        type: string
+      - id: gen_ai.multi-agent.task.name
+        stability: development
+        type: string
+      - id: gen_ai.multi-agent.task.description
+        stability: development
+        type: string
+      - id: gen_ai.multi-agent.task.agent.name
         stability: development
         type: string
         brief: Type of the tool utilized by the agent
