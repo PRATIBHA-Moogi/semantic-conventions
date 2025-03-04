@@ -207,6 +207,36 @@ groups:
         type: string
         brief: The tool call identifier.
         examples: ['call_mszuSIzqtI65i1wAUOE8w5H4']
+      - id: gen_ai.agent.role
+        stability: development
+        type: string
+        brief: Free-form Role of the GenAI agent provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.agent.goal
+        stability: development
+        type: string
+        brief: Free-form Goal of the GenAI agent provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.agent.prompt_template
+        stability: development
+        type: string
+        brief: prompt template of the GenAI agent provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.agent.context
+        stability: development
+        type: string
+        brief: prompt context of the GenAI agent provided by the application.
+        examples: ["Helps with math problems", "Generates fiction stories"]
+      - id: gen_ai.agent.tool_list
+        stability: development
+        type: string[]
+        brief: Tools list of the GenAI agent provided by the application.
+        examples: ["do_web_search", "generate_summary"]
+      - id: gen_ai.agent.llm
+        stability: development
+        type: string
+        brief: llm used by the GenAI agent provided by the application.
+        examples: ["granite_8b"]
       - id: gen_ai.tool.type
         stability: development
         type: string
@@ -281,6 +311,41 @@ groups:
 
           Additional output format details may be recorded in the future in the
           `gen_ai.output.{type}.*` attributes.
+      - id: gen_ai.multiagent.id
+        stability: development
+        type: string
+        brief: The unique identifier of the GenAI agent.
+        examples: ['asst_5j66UpCpwteGg4YSxUnt7lPY']
+      - id: gen_ai.multiagent.name
+        stability: development
+        type: string
+        brief: Human-readable name of the GenAI agent provided by the application.
+        examples: ["Math Tutor", "Fiction Writer"]
+      - id: gen_ai.multiagent.agent_list
+        stability: development
+        type: string[]
+        brief: Human-readable name of the GenAI agents list provided by the application.
+        examples: ["Reviewer", "Author"]
+      - id: gen_ai.multiagent.topology
+        stability: development
+        type: string[]
+        brief: Human-readable json keeping topology information.
+        examples: ["Reviewer", "Author"]
+      - id: gen_ai.multiagent.task.name
+        stability: development
+        type: string
+        brief: Human-readable text capturing task name information.
+        examples: ["Review the research papers"]
+      - id: gen_ai.multiagent.task.description
+        stability: development
+        type: string
+        brief: Human-readable text capturing task description information.
+        examples: ["You task is to summarise all review comments"]        
+      - id: gen_ai.multiagent.task.expected_output
+        stability: development
+        type: string
+        brief: Human-readable text capturing expected output from Multiagentic application.
+        examples: ["give output in json format"]
   - id: registry.gen_ai.openai
     type: attribute_group
     display_name: OpenAI Attributes
